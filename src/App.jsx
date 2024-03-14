@@ -1,17 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Login from './components/Login'
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {Home,About,Header,Blog,Contact,Course,Footer, Login, Signup} from './config/index'
 
-function App() {
-
+const App = () => {
   return (
-    <>
-     <h1>E-learning</h1>
-     <Login/>
-    </>
-  )
-}
+    <Router>
+      <div>
+        <Header />
+        <Routes>
+          <Route exact path="/" Component={Home} />
+          <Route exact path="/blog" Component={Blog} />
+          <Route exact path="/course" Component={Course} />
+          <Route exact path="/about" Component={About} />
+          <Route exact path="/contact" Component={Contact} />
+          <Route exact path="/signup" Component={Signup} />
+          <Route exact path="/login" Component={Login} />
+        </Routes>
+        <Footer/>
+      </div>
+    </Router>
+  );
+};
 
-export default App
+export default App;
