@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import {Home,About,Header,Blog,Contact,Course,Footer, Login, Signup} from './config/index'
+import {Home,About,Header,Blog,Contact,Course,Footer, Login, Signup, ForgetPassword} from './config/index'
 
 const App = () => {
   return (
@@ -15,6 +15,7 @@ const App = () => {
           <Route exact path="/contact" Component={Contact} />
           <Route exact path="/signup" Component={Signup} />
           <Route exact path="/login" Component={Login} />
+          <Route exact path="/forgetpassword" Component={ForgetPassword} />
         </Routes>
         <Footer/>
       </div>
